@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contoso Task Pane Add-in</title>
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' 'unsafe-eval'; script-src * 'unsafe-inline' 'unsafe-eval'; connect-src * 'unsafe-inline'; img-src * data: blob: 'unsafe-inline'; frame-src *; style-src * 'unsafe-inline';">
+    <!-- Office JavaScript API -->
+    <script type="text/javascript" src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+
+    <!-- For more information on Fluent UI, visit https://developer.microsoft.com/fluentui#/. -->
+    <link rel="stylesheet" href="https://res-1.cdn.office.net/files/fabric-cdn-prod_20230815.002/office-ui-fabric-core/11.1.0/css/fabric.min.css"/>
+
+    <!-- Template styles -->
+    <link href="taskpane.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+    <header class="headers">
+        <h1> Smart Organizer</h1>
+    </header>
+
+    <nav class="selection-buttons">
+        <button class="setting-button">⚙ Setting</button>
+    </nav>
+    <div id="view-settings">
+        <label for="API">API:</label>
+        <input type="password" id="API" name="API">
+        <button id="connect-button">Connect</button>
+    </div>
+
+    <main class="preview-mail">
+        <section>
+            <div class="detail-item">
+                <span class="label">From:</span>
+                <span id="item-from"></span>
+            </div>
+
+            <div class="detail-item">
+                <span class="label">Subject:</span>
+                <span id="item-subject"></span>
+            </div>
+
+            <div class="detail-item">
+                <span class="label">Attachments:</span>
+                <span id="attachment-view"></span>
+            </div>
+
+            <div class="email-body">
+                <textarea id="body-subject" rows="8"></textarea>
+            </div>
+
+            <div id="emailDisplay"></div>
+
+        </section>
+
+        <section class="category-section">
+            <label for="category">Choose category:</label>
+            <select id="category-selection">
+                <option value="hr">Hr</option>
+                <option value="finance">Finance</option>
+                <option value="social">Social</option>
+                <option value="general">General</option>
+            </select>
+            <button id="category-button">Choose</button>
+        </section>
+        
+        <section class="priority-section">
+            <label for="priority">Choose priority:</label>
+            <select id="priority-section">
+                <option value="high">High</option>
+                <option value="medium">Medium</option>
+                <option value="Low">Low</option>
+            </select>
+            <button id="priority-button">Choose</button>
+        </section>
+
+        <section class="move-section">
+            <label for="move">Move to:</label>
+            <select id="move">
+                <option value="hr">HR</option>
+                <option value="finance">Finance</option>
+                <option value="social">Social</option>
+                <option value="general">General</option>
+            </select>
+            <button id="move-button">Move</button>
+        </section>
+
+        <button id="analyze-button">analyze</button>
+
+        <div id="results"></div>
+    </main>
+<script src="taskpane.js"></script>
+   
+</body>
+
+</html>

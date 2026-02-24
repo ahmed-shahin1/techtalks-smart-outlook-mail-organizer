@@ -1,0 +1,20 @@
+# Core Framework
+fastapi==0.104.1
+
+# ASGI Server
+uvicorn[standard]==0.24.0
+
+# Data Validation (Pydantic v2)
+pydantic==2.5.0
+pydantic-settings==2.1.0
+
+# Environment Variables
+python-dotenv==1.0.0
+
+# Testing (Optional but recommended)
+pytest==7.4.3
+httpx==0.25.2
+
+# Text Processing (if you want better summarization later)
+# nltk==3.8.1
+# transformers==4.35.0

@@ -1,0 +1,31 @@
+# --------------------
+# ENV FILES
+# --------------------
+backend/.env
+frontend/.env
+
+# --------------------
+# PYTHON (BACKEND)
+# --------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+backend/__pycache__/
+
+# --------------------
+# NODE (FRONTEND)
+# --------------------
+frontend/node_modules/
+node_modules/
+
+# --------------------
+# VS CODE
+# --------------------
+.vscode/
+
+# --------------------
+# OS
+# --------------------
+.DS_Store
+Thumbs.db
