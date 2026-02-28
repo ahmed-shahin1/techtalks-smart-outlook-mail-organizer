@@ -25,6 +25,15 @@ def summarize_email(subject: str, body: str, category: str, priority: str) -> di
         temperature=0.3
     )
 
+     # Validate body length
+    word_count = len((body or "").split())
+    if word_count <= 10:
+        return {
+            "summary": "Error: Can't summarize this email, it's too short.",
+            "action_items": [],
+            "suggested_reply": ""
+        }
+
     text = response.choices[0].message.content.strip()
     text = text.replace("```json", "").replace("```", "")
     return json.loads(text)
