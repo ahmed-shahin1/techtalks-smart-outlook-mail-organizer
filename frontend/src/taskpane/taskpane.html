@@ -24,17 +24,8 @@
         <h1> Smart Organizer</h1>
     </header>
 
-    <nav class="selection-buttons">
-        <button class="setting-button">⚙ Setting</button>
-    </nav>
-    <div id="view-settings">
-        <label for="API">API:</label>
-        <input type="password" id="API" name="API">
-        <button id="connect-button">Connect</button>
-    </div>
-
     <main class="preview-mail">
-        <section>
+        <section class="email-details">
             <div class="detail-item">
                 <span class="label">From:</span>
                 <span id="item-from"></span>
@@ -66,7 +57,6 @@
                 <option value="social">Social</option>
                 <option value="general">General</option>
             </select>
-            <button id="category-button">Choose</button>
         </section>
         
         <section class="priority-section">
@@ -76,7 +66,6 @@
                 <option value="medium">Medium</option>
                 <option value="Low">Low</option>
             </select>
-            <button id="priority-button">Choose</button>
         </section>
 
         <section class="move-section">
@@ -89,9 +78,9 @@
             </select>
             <button id="move-button">Move</button>
         </section>
-
+        <section>
         <button id="analyze-button">analyze</button>
-
+        </section>
         <div id="results"></div>
     </main>
 <script src="taskpane.js"></script>
